@@ -9,6 +9,12 @@ namespace WouterRoelofs.Assessments.SequenceGenerator.Tests
 {
     internal static class AssertHelper
     {
+        /// <summary>
+        /// Assert two IList's are equal by comparing their item count and looping over each item to check their equality. 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="expected"></param>
+        /// <param name="actual"></param>
         public static void ListsAreEqual<T>(IList<T> expected, IList<T> actual)
         {
             Assert.IsNotNull(expected);
