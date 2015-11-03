@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WouterRoelofs.Assessments.SequenceGenerator.Models.Home.ISequence>
+
+@{
+    ViewBag.Title = "Sequences";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table table-striped table-bordered table-condensed">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sequence)
+        </th>
+    </tr>
+
+    @foreach (var sequence in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(item => sequence.Description)
+            </td>
+            <td>
+                @string.Join(", ", sequence.Sequence)
+            </td>
+        </tr>
+    }
+</table>

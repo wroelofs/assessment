@@ -1,0 +1,23 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WouterRoelofs.Assessments.SequenceGenerator.Tests
+{
+    internal static class AssertHelper
+    {
+        public static void ListsAreEqual<T>(IList<T> expected, IList<T> actual)
+        {
+            Assert.IsNotNull(expected);
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(expected.Count, actual.Count);
+            for (int i = 0; i < expected.Count; i++)
+            {
+                Assert.AreEqual(expected.ElementAt(i), actual.ElementAt(i));
+            }
+        }
+    }
+}
